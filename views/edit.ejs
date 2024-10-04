@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+    <title>EditBlog Page</title>
+    <link href="../uploads/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("./partials/nav") %>
+
+    <div class="container mt-5 pt-5 addDataFormMearginTop" style="min-height: 85vh;">
+      <form action="/editinfo/<%= editdata._id %>" method="post" enctype="multipart/form-data" id="form">
+        <h1>Edit Blog</h1>
+        <div class="mb-3">
+          <label for="title" class="form-label">Blog_Title</label>
+          <input type="text" class="form-control" id="title" name="title" value="<%= editdata.Title %>"
+            aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+          <label for="blogerName" class="form-label">BlogerName</label>
+          <input type="text" class="form-control" id="blogerName" value="<%= editdata.BlogerName %>" name="blogerName">
+        </div>
+
+        <div class="mb-3">
+          <label for="body" class="form-label">Body</label>
+          <textarea class="form-control" id="body" name="body" value="<%= editdata.Body %>"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input type="file" class="form-control" id="image" name="image">
+          <img src="/<%= editdata.Image %>" height="100px" width="100px" class="mt-2">
+
+        </div>
+
+        <button type="submit" class="btn btn-dark mt-4">Update</button>
+      </form>
+    </div>
+
+    <%- include("./partials/footer") %>
+
+      <%- include("./partials/script") %>
+</body>
+
+</html>

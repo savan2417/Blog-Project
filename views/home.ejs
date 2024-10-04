@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+    <title>HomePage</title>
+    <link href="../uploads/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("./partials/nav") %>
+
+    <!-- <div class="container mt-5 userData">
+      <div class="row mt-5">
+        <%= JSON.stringify(blogs) %>
+      </div>
+    </div> -->
+
+
+    <div class="container mt-5 d-flex gap-5 flex-wrap justify-content-center mb-5" style="min-height: 74.5vh;">
+
+      <% blogs.forEach( (blog)=> { %>
+
+        <div class="card" style="width: 18rem;">
+          <video controls>
+            <source src="<%= blog.Video %>" class="card-img-top">
+          </video>
+          <div class="card-body">
+            <h4 class="card-title">
+              <%= blog.Title %>
+            </h4>
+            <p class="card-text fw-bold">
+              <%= blog.BlogerName %><i class="fa-solid fa-circle-check"></i>
+            </p>
+            <div class="threebtn d-flex gap-2">
+              <a href="/view/<%= blog._id %>" class="btn btn-dark">View</a>
+              <a href="/editData/<%= blog._id %>" class="btn btn-success">Edit</a>
+              <a href="/deleteData/<%= blog._id %>" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+
+
+    <%- include("./partials/footer") %>
+
+      <%- include("./partials/script") %>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+    <title>ViewPage</title>
+    <link href="../uploads/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("./partials/nav") %>
+
+    <div class="container mt-5 viewpage" style="min-height: 74.5vh;">
+      <!-- Video display section -->
+      <div class="video-container mt-4">
+        <% if (blog.Video) { %>
+          <video controls class="viewpageVideo img-fluid">
+            <source src="/<%= blog.Video %>" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <% } else { %>
+            <p>No video available for this blog post.</p>
+            <% } %>
+      </div>
+
+      <!-- Blog details -->
+      <h2 class="mb-1 pt-3 fw-bold">
+        <%= blog.Title %>
+      </h2>
+
+
+      <%- include("./partials/footer") %>
+        <%- include("./partials/script") %>
+</body>
+
+</html>

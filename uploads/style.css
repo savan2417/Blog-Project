@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* navbar section */
+.navbar {
+
+  background-color: black;
+}
+
+.navbar.nav {
+  height: 100vh;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 1.3rem;
+}
+
+.navbar-email {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.navbar-email a:hover {
+  color: #8850f7c3;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 17px;
+}
+
+.navbar-light .navbar-toggler {
+  color: white;
+  border-color: white;
+
+}
+
+.navbar-toggler-icon {
+
+  background-color: white;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: red;
+  font-size: 19px;
+}
+
+.navbar-nav li {
+  position: relative;
+}
+
+.navbar-nav li::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  width: 0%;
+  left: 20px;
+  transition: all 0.5s linear;
+  border-bottom: 2.4px solid red;
+}
+
+.navbar-nav li:hover::after {
+  width: 80%;
+}
+
+.navbar-light .navbar-brand {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: red;
+  font-size: 19px;
+}
+
+.dropdown-menu {
+  background-color: white;
+
+}
+
+.dropdown-item {
+  color: red;
+  font-size: 19px;
+}
+
+.dropdown-item:hover {
+  color: red;
+  font-size: 19px;
+
+}
+
+/* signup */
+.signup-main {
+  margin-top: 100px;
+  padding: 20px;
+  min-height: 79vh;
+
+
+}
+
+button[type="submit"] {
+  background-color: black;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.signup-heading {
+  font-weight: 700;
+  color: black;
+}
+
+label {
+  font-weight: 600;
+  color: black;
+}
+
+.alert-box {
+  margin-top: 100px;
+}
+
+/* error */
+.mt-5 {
+  margin-top: 6rem !important;
+}
+
+/* .userData {
+  margin-top: 200px;
+} */
+
+/* Form */
+
+#form {
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.828) 90%, white);
+  max-width: 400px;
+  padding: 30px 20px 50px;
+  margin: 0 auto;
+
+}
+
+form h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form label {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+form button {
+  display: flex;
+  justify-content: center;
+}
+
+.addDataFormMearginTop {
+  margin-top: 100px;
+}
+
+
+/* card */
+.card-body h4 {
+  font-weight: 700;
+}
+
+.card-body p {
+  font-weight: 500;
+}
+
+.card-body a {
+  margin-top: 30px;
+}
+
+.card {
+  box-shadow: 3px 3px 5px grey;
+  max-height: 400px;
+}
+
+.card img {
+  height: 200px;
+}
+
+.fa-circle-check {
+  margin-left: 5px;
+  margin-top: 5px;
+  color: rgb(25, 12, 12);
+}
+
+.viewpageImage {
+  width: 50%;
+  height: auto;
+}
+
+.viewPageDetails {
+  background-color: rgba(128, 128, 128, 0.071);
+  border-radius: 5px;
+  padding: 10px;
+  white-space: pre-wrap;
+  min-height: 300px;
+
+
+}
+
+
+.viewPageBlogerName {
+  color: rgba(0, 0, 0, 0.853);
+  font-weight: 600;
+}
+
+.default-img {
+  border-radius: 50%;
+}
+
+/* footer */
+.section-footer {
+
+  width: 100%;
+
+  background-color: rgb(0, 0, 0);
+  color: red;
+  padding: 24px;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 567px) {
+  .viewpageImage {
+    width: 100%;
+    height: auto;
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .viewpageImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and ((min-width: 769px) and (max-width: 992px)) {
+  .viewpageImage {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .viewpageImage {
+    width: 50%;
+    height: auto;
+  }
+}

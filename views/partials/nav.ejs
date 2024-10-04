@@ -1,0 +1,64 @@
+<!-- navbar start -->
+<nav class="navbar  fixed-top navbar-expand-lg navbar-light ">
+  <div class="container ">
+    <div>
+      <a class="navbar-brand" href="/" class="logo">
+        <h1> Blog App </h1>
+      </a>
+
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link ul-color" aria-current="page" href="/">Home</a>
+        </li>
+
+        <% if(locals.user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/addData">Add Blog</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="login" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <%= locals.user.FullName %>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+
+            </ul>
+          </li>
+          <% } else{ %>
+            <li class="nav-item">
+              <a class="nav-link ul-color" aria-current="page" href="/signup">Create Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ul-color" aria-current="page" href="/signin">SignIn</a>
+            </li>
+            <% } %>
+
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- nav end -->
+
+
+<% if(locals.error) { %>
+  <div class="container mt-5 errorMessage">
+    <div class="row mt-5">
+      <div class="alert alert-danger " role="alert">
+        <%= locals.error %>
+      </div>
+    </div>
+  </div>
+  <% } %>
